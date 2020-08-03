@@ -1,4 +1,4 @@
-#include "bsq.h"
+#include "bcq.h"
 
 void	ft_putstr(char *str)
 {
