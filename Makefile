@@ -1,9 +1,9 @@
-NAME = bsq
+NAME = bcq
 
 SRCS = *.c
 
 all:
-	gcc $(NAME) -o -Wall -Wextra -Werror $(SRCS)
+	gcc -Wall -Wextra -Werror $(SRCS) -o ${NAME}
 
 clean:
 	/bin/rm -f *.o *test*
