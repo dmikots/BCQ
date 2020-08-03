@@ -83,7 +83,8 @@ char	**read_file(char *file)
 		tmp = malloc(sizeof(char *) * BUF_SIZE);
 		while (c[0] != '\n')
     	{
-			tmp[++i] = c[0];
+			if (j != -1)
+				tmp[++i] = c[0];
 			read(fd, c, 1);
     	}
 		tab[++j] = ft_strdup(tmp);
@@ -124,13 +125,16 @@ int		**get_int_array(char **tab, int x)
 {
 	int		**arr;
 	int		j;
+	int		i;
 
 	j = 0;
+	i = 1;
 	arr = malloc(sizeof(int **) * BUF_SIZE);
 	while (j < x)
 	{
 		arr[j] = malloc(sizeof(int *) * BUF_SIZE);
-		arr[j] = convert_char_to_int(tab[j]);
+		arr[j] = convert_char_to_int(tab[i]);
+		i++;
 		j++;
 	}
 //	free(arr);
