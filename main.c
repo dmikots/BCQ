@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#define BUF_SIZE 4096
-#define LEN(arr) ((int) (sizeof (arr) / sizeof (arr) [0]))
+#include "bsq.h"
 
 void	ft_putstr(char *str)
 {
